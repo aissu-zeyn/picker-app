@@ -9,7 +9,7 @@ import './App.css'
 
 function Navigation() {
   const location = useLocation()
-  const isHome = location.pathname === '/'
+  const isHome = location.pathname === '/' || location.pathname === '/picker-app/' || location.pathname === '/picker-app'
 
   if (isHome) return null
 
@@ -24,7 +24,7 @@ function Navigation() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/picker-app">
       <div className="app">
         <Navigation />
         <main className="main-content">
